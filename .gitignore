@@ -58,3 +58,6 @@ PARPACK/EXAMPLES/MPI/p[cz]ndrv1
 *.suo
 VISUAL_STUDIO/Release MKL/
 VISUAL_STUDIO/bin/
+
+# Generated for use by rust bindings
+rs-hack-output/

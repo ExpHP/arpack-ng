@@ -82,6 +82,11 @@ AC_F77_FUNC(cheev$SYMBOLSUFFIX, cheevsuff)
 dnl Needed for BLAS check and for tests (even when suffix is empty)
 CFLAGS="$CFLAGS -Dsgemm=$sgemmsuff -Dsnaupd=$snaupdsuff -Dsneupd=$sneupdsuff -Ddnaupd=$dnaupdsuff -Ddneupd=$dneupdsuff -Dcheev=$cheevsuff"
 
+AC_F77_FUNC(ab, rs_hack_f77_mangled_normal)
+AC_SUBST(rs_hack_f77_mangled_normal)
+AC_F77_FUNC(a_b, rs_hack_f77_mangled_underscore)
+AC_SUBST(rs_hack_f77_mangled_underscore)
+
 ifdef([LT_INIT], [], [
   errprint([error: you must have libtool 2.4.2 or a more recent version
 ])
